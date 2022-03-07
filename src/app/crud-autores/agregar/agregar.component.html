@@ -1,0 +1,71 @@
+<form [method]="['POST']" [formGroup]="formAgregar">
+  <div class="row">
+    <div class="col-sm-4">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" formControlName="nombre">
+    </div>
+    <div class="col-sm-4">
+      <label for="apellido" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="apellido" formControlName="apellido">
+    </div>
+    <div class="col-sm-4">
+      <label for="nacimiento" class="form-label">Fecha de nacimiento</label>
+      <input type="date" class="form-control" id="nacimiento" formControlName="nacimiento">
+    </div>
+
+    <div formArrayName="contacto" class="col-sm-4">
+      <div *ngFor="let item of contacto.controls; let i = index">
+        <div formArrayName="{{i}}" class="contacto">
+          <button class="btn btn-danger eliminar" (click)="eliminarCamposContacto(i)">x</button>
+          <div>
+            <label for="direccion" class="form-label">Direccion</label>
+            <input type="text" class="form-control" formControlName="direccion">
+          </div>
+          <div>
+            <label for="telefono" class="form-label">Telefono</label>
+            <input type="telefono" class="form-control" formControlName="telefono">
+          </div>
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-dark agregar" (click)="agregarCamposContacto()">Añadir otro campo</button>
+    </div>
+
+  </div>
+  <br>
+  <button class="btn btn-primary btn-sm" [disabled]="!formAgregar.valid" (click)="agregarAutor()">Aceptar
+  </button>
+</form>
+
+<br>
+
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Fecha de nacimiento</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Telefono</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let autor of autores">
+      <th>{{autor.nombre}}</th>
+      <td>{{autor.apellido}}</td>
+      <td>{{autor.nacimiento}}</td>
+      <td>
+        <span *ngFor="let contacto of autor.contacto; let i=index">
+          {{contacto.direccion}}
+          <span *ngIf="i >= 0 && i < autor.contacto.length-1">,</span>
+        </span>
+      </td>
+      <td>
+        <span *ngFor="let contacto of autor.contacto; let i=index">
+          {{contacto.telefono}}
+          <span *ngIf="i >= 0 && i < autor.contacto.length-1">,</span>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,73 @@
+{
+  "libros": [
+    {
+      "id": 0,
+      "nombre": "La biblia de los caidos",
+      "autor": "Fernando Trujillo",
+      "isbn": 12345678,
+      "email": "Fernando.Trujillo@libros.com",
+      "precio": 120.39
+    },
+    {
+      "id": 1,
+      "nombre": "Emma",
+      "autor": "Emilia",
+      "isbn": "12345678",
+      "email": "Emilia@libros.com",
+      "precio": "390.03"
+    },
+    {
+      "id": 2,
+      "nombre": "Los malos",
+      "autor": "Emilia",
+      "isbn": "12345678",
+      "email": "Emilia@libros.com",
+      "precio": "390.03"
+    },
+    {
+      "id": 3,
+      "nombre": "La biblia de los caidos: del diario del gris",
+      "autor": "Fernando Trujillo",
+      "isbn": "12345638",
+      "email": "Fernando.Trujillo@libros.com",
+      "precio": "83.38"
+    }
+  ],
+  "autores": [
+    {
+      "id": 0,
+      "nombre": "Fernando",
+      "apellido": "Trujillo",
+      "nacimiento": "2022-03-14",
+      "contacto": [
+        {
+          "direccion": "Los Alamos 124, Madrid",
+          "telefono": 2394983892
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "nombre": "Alejandro",
+      "apellido": "Galvan",
+      "nacimiento": "2022-03-14",
+      "contacto": [
+        {
+          "direccion": "jdjdjd",
+          "telefono": "94994494"
+        },
+        {
+          "direccion": "idfjk",
+          "telefono": "39398498"
+        }
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 0,
+      "email": "agexandro@gmail.com",
+      "contrasenia": "123456"
+    }
+  ]
+}

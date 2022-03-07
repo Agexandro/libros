@@ -1,0 +1,6 @@
+.container {
+  background: rgba(211, 211, 211, 0.333);
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+}

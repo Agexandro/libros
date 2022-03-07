@@ -1,0 +1,14 @@
+<div class="card">
+  <form [formGroup]="loginForm">
+    <div>
+      <label for="email" class="form-label">Email</label>
+      <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div>
+      <label for="contrasenia" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="contrasenia" formControlName="contrasenia">
+    </div>
+    <br>
+    <button class="btn btn-primary btn-sm" role="button" (click)="iniciarSesion()">Aceptar</button>
+  </form>
+</div>
